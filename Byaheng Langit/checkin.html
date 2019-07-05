@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body class="background">
+    <p class="title">Check-In</p><br>
+    <form method="POST" action="mainmenu.html">
+        <div class="form-group">
+            <input type="text" class="form-control center" placeholder="Ticket Number" id="usr"
+                style="border-radius: 28px; width: 90%;">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control center" placeholder="Password" id="pwd"
+                style="border-radius: 28px; width: 90%;">
+        </div>
+        <button class="buttonbg" id="confirm" style="padding-left: 5%; padding-right: 5%; margin: 5% 5% 0 0 ;"
+            type="button">Confirm</button>
+    </form>
+
+
+</body>
+<script>
+    document.getElementById("confirm").onclick = function () {
+        location.href = 'mainmenu.html';
+    }
+</script>
+
+</html>

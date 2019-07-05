@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="background">
+    <p class="title">Setting</p><br>
+    <button id="Language" type="button" class="btn"
+        style="background: white; display: block; margin: 0 auto; border-radius: 28px; width: 90%; padding: 10px">Language</button><br>
+    <button id="timezone" type="button" class="btn"
+        style="background: white; display: block; margin: 0 auto; border-radius: 28px; width: 90%; padding: 10px">Time
+        Zone</button><br><br>
+    <button id="signout" type="button" class="btn"
+        style="background: #FF001B; color: white; display: block; margin: 0 auto; border-radius: 28px; width: 90%; padding: 10px">Sign
+        Out</button>
+    <button type="button" id="check" class="button" style="position:fixed; bottom: 5%; right: 5%;">
+        <img src="assets/check.png" id="setting" height="36px" width="36px">
+    </button>
+
+</body>
+<script>
+    document.getElementById("signout").onclick = function () {
+        location.href = 'menu.html';
+    }
+    document.getElementById("check").onclick = function () {
+        location.href = 'menu.html';
+    }
+</script>
+
+</html>

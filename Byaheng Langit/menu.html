@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="background">
+    <p class="logo" style="text-align: center; font-size: 50px;">Byaheng Langit Airlines</p>
+    <div class="row">
+        <div class="col-xs-6" style="text-align: center;">
+            Departures
+            <hr style="height:2px; width: 50%; background-color:#005CAB;">
+
+        </div>
+        <div class="col-xs-6" style="text-align: center;">Arrivals</div>
+    </div>
+    <img src="assets/departure.png" id="departure" height="360px" width="90%" class="center"
+        style="border-radius: 10px;">
+    <button type="button" class="button" onclick="location.href='checkin.html'"
+        style="position:fixed; bottom: 5%; left: 5%;">
+        <img src="assets/checkin.png" id="checkin" height="36px" width="36px">
+    </button>
+
+    <button type="button" class="button" style="position:fixed; bottom: 5%; right: 5%;">
+        <img src="assets/setting.png" id="setting" height="36px" width="36px">
+    </button>
+</body>
+<script>
+    document.getElementById("setting").onclick = function () {
+        location.href = 'setting.html';
+    }
+    document.getElementById("checkin").onclick = function () {
+        location.href = 'checkin.html';
+    }
+</script>
+
+</html>

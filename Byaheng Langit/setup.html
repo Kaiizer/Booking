@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="background">
+    <p class="title">Setup</p>
+    <p id="setup" style="margin-left: 5%; text-align: left; padding-top: 70px;">Select Language:</p>
+    <button id="setupbutton" type="button" class="btn"
+        style="background: white; display: block; margin: 0 auto; border-radius: 28px; width: 90%; padding: 10px">Language</button>
+
+    <div id="terms" style="margin-left: 5%; margin-right: 5%;" class="form-group">
+        <label for="comment">Terms & Condition</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+    <button class="buttonbg" id="confirm" style="padding-left: 5%; padding-right: 5%; margin: 5% 5% 0 0 ;"
+        type="button">Confirm</button>
+
+    <hr style="height:2px; width: 90%; background-color:black; left: 5%; bottom:10%; position: fixed;">
+    <img src="assets/airplane.png" id="airplane" height="94px" width="94px" class="center"
+        style="bottom: 5.7%; left:0; position:fixed; transform:rotate(44.5deg); transition: 3s ease;">
+
+</body>
+<script>
+    document.getElementById("terms").style.display = "none";
+
+
+    document.getElementById("confirm").onclick = function () {
+
+        document.getElementById("terms").style.display = "none";
+        document.getElementById("setup").textContent = "Select Time Zone";
+        document.getElementById("setupbutton").textContent = "Time Zone";
+        var pos = (document.getElementById("setup").offsetWidth / 2) - (document.getElementById("setup").offsetWidth * .10);
+        // alert(pos);
+        document.getElementById("airplane").style.left = pos;
+
+
+        document.getElementById("confirm").onclick = function () {
+            document.getElementById("terms").style.display = "block";
+            document.getElementById("setup").textContent = "";
+            document.getElementById("setupbutton").style.display = "none";
+            document.getElementById("confirm").textContent = "I Accept";
+            document.getElementById("airplane").style.left = "62%";
+
+            document.getElementById("confirm").onclick = function () {
+                location.href = 'menu.html';
+            }
+        }
+    }
+</script>
+
+</html>
